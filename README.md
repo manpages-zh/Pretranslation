@@ -13,6 +13,7 @@
 您自己也可以很容易将 man 手册转换为 html 文件，man 的` -H `选项将任意的手册转换为网页文件，并在您电脑中默认浏览器（如果没有没有指定，则通常选择 lynx）中打开。下面是该选项的介绍。
 
 -H[browser], --html[=browser]
+
 This  option  will  cause groff to produce HTML output, and will display that output in a web browser.  The choice of browser  is determined  by the optional browser argument if one is provided, by the $BROWSER  environment  variable,  or  by  a  compile-time default  if  that  is unset (usually lynx).  This option implies -t, and will only work with GNU troff.
 
 ----------------------------------------------
@@ -32,6 +33,7 @@ This  option  will  cause groff to produce HTML output, and will display that ou
 您可以发现这里多加了一个 `--nh` 选项，这个选项的解释如下：
 
 --no-hyphenation, --nh
+
               Normally, nroff will automatically hyphenate text at line breaks
               even in words that do not contain hyphens, if it is necessary to
               do so to lay out words on  a  line  without  excessive  spacing.
