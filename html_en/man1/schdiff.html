@@ -1,0 +1,137 @@
+<!-- Creator     : groff version 1.22.2 -->
+<!-- CreationDate: Wed Sep 25 22:56:01 2013 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>schdiff</title>
+
+</head>
+<body>
+
+<h1 align="center">schdiff</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#BUGS">BUGS</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>schdiff</b>
+&minus; Graphical diff tool for schematics</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>schdiff</b>
+<i>infile1.sch infile2.sch</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The
+<b>schdiff</b> program will use <b>ImageMagick(1)</b> to
+display a graphical diff of two gschem schematic files.
+It&rsquo;s most useful when combined with a revision control
+system so it can compare two revisions of the same file,
+review changes, etc. However, it is limited in that it can
+only compare two files at a time; it cannot diff entire
+directories nor can it diff an entire revision (unless that
+revision affected only one file). It can easily be
+configured to work with most revision control systems. Here
+are instructions for three:</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>git:</b> Use
+the <b>difftool</b> command exactly as you would use
+<b>diff</b> , but supply the <b>&minus;x schdiff</b>
+option.</p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>mercurial:</b>
+Use the <b>schdiff</b> command exactly as you would use
+<b>diff</b> , but add the following lines to your .hgrc:</p>
+
+<p style="margin-left:22%; margin-top: 1em">[extensions]
+<br>
+hgext.extdiff = <br>
+[extdiff] <br>
+cmd.schdiff = schdiff</p>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>subversion:</b>
+Use the <b>diff</b> command like normal, but supply the
+<b>--diff-cmd schdiff</b> option.</p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Use git to view
+the changes to a file between two revisions</p>
+
+<p style="margin-left:22%;">git difftool &minus;x schdiff
+182110f690c51eb53ea1799fd022e87322d742e3
+039e012397f2638d1577dd7c80fb862a5503dbfd cpu.sch</p>
+
+<p style="margin-left:11%;">Use mercurial to see all the
+changes since a specific revision</p>
+
+<p style="margin-left:22%;">hg schdiff &minus;r
+8442880f9835 cpld.sch</p>
+
+<p style="margin-left:11%;">Use subversion to review a
+specific revision</p>
+
+<p style="margin-left:22%;">svn diff &minus;&minus;diff-cmd
+schdiff &minus;c 49 power.sch</p>
+
+<h2>BUGS
+<a name="BUGS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">If you find
+one, please report it at https://bugs.launchpad.net/geda</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Alan Somers</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>composite(1),
+display(1), git(1), gschem(1), hg(1), svn(1)</b></p>
+<hr>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!-- Creator     : groff version 1.22.2 -->
+<!-- CreationDate: Wed Sep 25 22:55:57 2013 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>gsymcheck</title>
+
+</head>
+<body>
+
+<h1 align="center">gsymcheck</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#ENVIRONMENT">ENVIRONMENT</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#COPYRIGHT">COPYRIGHT</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck -
+gEDA/gaf Symbol Checker</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>gsymcheck</b>
+[&minus;h] [&minus;v] [&minus;q] symbol1 [... symbolN]</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i>gsymcheck</i>
+is a symbol checker for gEDA/gaf. Here is a list of checks
+that <i>gsymcheck</i> performs:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for graphical= attribute (if present does varied
+tests)</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for the device= attribute</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for various other missing attributes (pinlabel,
+pintype, pinseq, footprint, refdes)</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks to make sure that the active pin end is on the
+100 unit grid.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks the uses of the various attributes (duplicates,
+incorrect syntax, invalid values, etc...)</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for obsolete, old, and forbidden attributes</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for any nets or buses within a symbol</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks for any other connections within a symbol</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="86%">
+
+
+<p>Checks to make sure the number of pins is the correct
+number</p> </td></tr>
+</table>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i>gsymcheck</i>
+accepts the following options:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p style="margin-top: 1em"><b>-q</b></p></td>
+<td width="6%"></td>
+<td width="77%">
+
+
+<p style="margin-top: 1em">Quiet mode on. This mode turns
+off all warnings/notes/messages. (optional)</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>-v</b></p></td>
+<td width="6%"></td>
+<td width="77%">
+
+
+<p>Verbose mode 1. This mode will show all error messages
+(optional)</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>-vv</b></p></td>
+<td width="6%"></td>
+<td width="77%">
+
+
+<p>Verbose mode 2. This mode will show all error and
+warning messages (optional)</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>-vvv</b></p></td>
+<td width="6%"></td>
+<td width="77%">
+
+
+<p>Verbose mode 2. This mode will show all error, warning,
+and info messages (optional)</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>-h</b></p></td>
+<td width="6%"></td>
+<td width="77%">
+
+
+<p>Usage summary / gsymcheck help</p></td></tr>
+</table>
+
+<p style="margin-left:11%;">symbol1 [... symbolN]</p>
+
+<p style="margin-left:23%;">At least one symbol file must
+be specified. If multiple symbols are specified then they
+are sequentially read in and checked. It is important that
+the schematic(s) follow all the options (ie last).</p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Here are some
+examples on how to run <i>gsymcheck</i>:</p>
+
+<p style="margin-left:11%; margin-top: 1em">To get usage
+information just run:</p>
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck</p>
+
+<p style="margin-left:11%; margin-top: 1em">To actually
+check a symbol with just error counts, run:</p>
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck
+symbolfilename.sym</p>
+
+<p style="margin-left:11%; margin-top: 1em">To get the
+actuall error messages, run:</p>
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck
+&minus;v symbolfilename.sym</p>
+
+<p style="margin-left:11%; margin-top: 1em">To see all the
+error messages and warnings, run:</p>
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck
+&minus;vv symbolfilename.sym</p>
+
+<p style="margin-left:11%; margin-top: 1em">To see all the
+error messages, warnings, and parse info, run:</p>
+
+<p style="margin-left:11%; margin-top: 1em">gsymcheck
+&minus;vvv symbolfilename.sym</p>
+
+<h2>ENVIRONMENT
+<a name="ENVIRONMENT"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i>gsymcheck</i>
+respects the following environment variable: <b><br>
+GEDADATA</b></p>
+
+<p style="margin-left:23%;">specifies where the various
+required scheme and rc files are located (the default is
+${prefix}/share/gEDA). This environment variables does not
+need to be set by the end user unless they are moving the
+executables to a new install ${prefix}.</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Ales Hvezda and
+many others</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>gschem</b>(1),
+<b>gnetlist</b>(1)</p>
+
+<h2>COPYRIGHT
+<a name="COPYRIGHT"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Copyright
+&copy; 1999-2008 Ales Hvezda</p>
+
+<p style="margin-left:11%; margin-top: 1em">This document
+can be freely redistributed according to the terms of the
+GNU General Public License version 2.0</p>
+<hr>
+</body>
+</html>
